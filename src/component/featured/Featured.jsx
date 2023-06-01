@@ -1,4 +1,5 @@
 import React from 'react';
+import { useContext } from 'react';
 import "./featured.scss"
 import { MoreVert } from '@mui/icons-material'; 
 import { CircularProgressbar } from 'react-circular-progressbar';
@@ -7,6 +8,8 @@ import {buildStyles} from 'react-circular-progressbar';
 import { KeyboardArrowDown } from '@mui/icons-material';
 import { KeyboardArrowUpOutlined } from '@mui/icons-material'; 
 import Target_data from './Target_data';
+import { DarkModeContext } from '../../context/darkModeContext';
+
 const Featured = () => { 
   let T_data=[
     {
@@ -29,8 +32,9 @@ const Featured = () => {
     }
     
   ]
+  const {light} = useContext(DarkModeContext);
   return (
-    <div className='featured'>
+    <div className={light ? "featured" : "featured dark"}>
         <div className="top">
             <h1 className="title">Total Revenue</h1> 
             <MoreVert fontSize='small'/>

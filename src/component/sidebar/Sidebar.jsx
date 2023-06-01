@@ -15,9 +15,9 @@ import { Link } from 'react-router-dom';
 import { DarkModeContext } from '../../context/darkModeContext'; 
 import { useContext } from 'react'; 
 const Sidebar = () => { 
-  const {dispatch} =useContext(DarkModeContext);
+  const {light} = useContext(DarkModeContext);
   return (
-    <div className='sidebar'> 
+    <div className={light ? "sidebar" : "sidebar dark"}> 
     <div className="top"> 
     <Link to="/" style={{textDecoration:"none"}}> {/*// that means homepage*/}
     <span className="logo">FlorenceRed</span>
@@ -89,12 +89,12 @@ const Sidebar = () => {
           </li>
     </ul>
         </div> 
-    <div className="bottom">
+    {/* <div className="bottom">
        <div className="colorOptions" onClick={()=>dispatch({type:"LIGHT"})}></div> 
       <div className="colorOptions" onClick={()=>dispatch({type:"DARK"})}></div> 
       <div className="colorOptions"></div>
 
-    </div> 
+    </div>  */}
     </div>
   ) 
 }
