@@ -10,7 +10,10 @@ import { ListOutlined } from '@mui/icons-material';
 import { DarkModeContext } from '../../context/darkModeContext'; 
 import { useContext } from 'react';
 const Navbar = () => { 
-  const {dispatch} =useContext(DarkModeContext);
+  const {light,setLight} = useContext(DarkModeContext);
+  const toggleTheme = ()=>{
+    setLight(!light);
+  }
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -24,7 +27,7 @@ const Navbar = () => {
             English
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon className='icon' onClick={()=>dispatch({type:"TOGGLE"})} style={{cursor:"pointer"}}/>
+            <DarkModeOutlinedIcon className='icon' onClick={toggleTheme} style={{cursor:"pointer"}}/>
             
           </div>
           <div className="item">

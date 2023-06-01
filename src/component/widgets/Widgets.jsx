@@ -1,5 +1,6 @@
-import React from 'react' 
+import React, { useContext } from 'react' 
 import "./widgets.scss" 
+import { DarkModeContext } from "../../context/darkModeContext";
 import { KeyboardArrowUp,MonetizationOnOutlined } from '@mui/icons-material';
 const Widgets = ({title,isMoney,link,icon}) => { 
      
@@ -49,9 +50,9 @@ const Widgets = ({title,isMoney,link,icon}) => {
     //         default:
     //             break;
     //         }
-    
+  const {dark} = useContext(DarkModeContext);
   return (
-    <div className='widget'>
+    <div className={dark ? "widget" : "widget dark"}>
         <div className="left">
             <span className="title">{title}</span> 
         <span className="counter">{isMoney && "$"}{amount}</span> 

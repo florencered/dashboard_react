@@ -1,53 +1,87 @@
- //app gives me access to all the child components of the components included in the child file already
- .app,.dark{
-    background-color: #222; 
-    color:rgb(156,156,156); 
-    // color:white 
-    .chartGrid{
-        stroke:rgba(228,228,228,0.219);
-    } 
-    .navbar{
-        color:#999; 
-        border-color: #333; 
-        .search{
-            border-color: gray;
-        }
-    } 
-    .sidebar{
-        background-color: #111; 
-        border-color:#333; 
-        .top{
-            .logo{
-                color:#999;
-            }
-        } 
-        hr{
-            border-color:#333;
-        } 
-        ul{
-            li{
-                &:hover{
-                    background-color: #333;
-                } 
-                .icon{
-                    color:#999;
-                }
-            }
-        }
-        
+//app gives me access to all the child components of the components included in the child file already
+.app.dark {
+  background-color: #222;
+  color: rgb(156, 156, 156);
+  // color:white
+  .chartGrid {
+    stroke: rgba(228, 228, 228, 0.219);
+  }
+  .navbar {
+    color: #999;
+    border-color: #333;
+    .search {
+      border-color: gray;
     }
-        .datatable{
-            .datagrid{
-                color:gray; 
-                border:none; 
-                .viewButton,.deleteButton,.cellWithStatus{
-                    color:gray; 
-                    border:none;
-                }
-            }
-        } 
-        input{
-            background-color:transparent; //takes color of the background
+  }
+  .sidebar {
+    background-color: #222;
+    border-color: #333;
+    .top {
+      .logo {
+        color: #999;
+      }
+    }
+    hr {
+      border-color: #333;
+    }
+    ul {
+      li {
+        &:hover {
+          background-color: #333;
         }
-        
- }
+        .icon {
+          color: #999;
+        }
+      }
+    }
+  }
+  .datatable {
+    .datagrid {
+      color: gray;
+      border: none;
+      .viewButton,
+      .deleteButton,
+      .cellWithStatus {
+        color: gray;
+        border: none;
+      }
+    }
+  }
+  input {
+    background-color: transparent; //takes color of the background
+  }
+}
+
+//app gives me access to all the child components of the components included in the child file already
+.app{
+  background-color: #f1f1f1;
+  color: rgb(0, 0, 0);
+  // color:white
+  .chartGrid {
+    stroke: rgba(0, 0, 0, 0.219);
+  }
+  .navbar {
+    color: #999;
+    // border-color: #333; 
+    border-color: lightgray;
+    .search {
+      border-color: gray;
+    }
+  } 
+
+  .datatable {
+    .datagrid {
+      color: gray;
+      border: none;
+      .viewButton,
+      .deleteButton,
+      .cellWithStatus {
+        color: gray;
+        border: none;
+      }
+    }
+  }
+  input {
+    background-color: transparent; //takes color of the background
+  }
+}
